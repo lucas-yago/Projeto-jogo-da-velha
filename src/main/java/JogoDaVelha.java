@@ -47,6 +47,10 @@ public class JogoDaVelha {
         board[row][column] = currentPlayer;
     }
 
+    public void switchPlayer() {
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    }
+
     public char getCurrentPlayer() {
         return currentPlayer;
     }

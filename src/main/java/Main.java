@@ -25,6 +25,8 @@ public class Main {
             }
 
             game.showBoard();
+
+            game.switchPlayer();
         }
 
     }
