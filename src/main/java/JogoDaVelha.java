@@ -47,7 +47,7 @@ public class JogoDaVelha {
         board[row][column] = currentPlayer;
     }
 
-    public char getJogadorAtual() {
+    public char getCurrentPlayer() {
         return currentPlayer;
     }
 }

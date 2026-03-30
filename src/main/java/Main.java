@@ -9,7 +9,7 @@ public class Main {
         game.showBoard();
 
         while (true) {
-            System.out.println("Jogador " + game.getJogadorAtual() + ", digite sua jogada: ");
+            System.out.println("Jogador " + game.getCurrentPlayer() + ", digite sua jogada: ");
 
             System.out.println("Linha: ");
             int row = scanner.nextInt();
