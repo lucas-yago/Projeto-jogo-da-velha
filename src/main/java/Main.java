@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -9,13 +10,25 @@ public class Main {
         game.showBoard();
 
         while (true) {
-            System.out.println("Jogador " + game.getCurrentPlayer() + ", digite sua jogada: ");
+            int row ;
+            int column ;
 
-            System.out.println("Linha: ");
-            int row = scanner.nextInt();
+            while (true) {
+                try {
+                    System.out.println("\nJogador " + game.getCurrentPlayer() + ", digite sua jogada: ");
 
-            System.out.println("Coluna: ");
-            int column = scanner.nextInt();
+                    System.out.print("Linha: ");
+                    row = scanner.nextInt();
+
+                    System.out.print("Coluna: ");
+                    column = scanner.nextInt();
+                    break;
+
+                } catch (InputMismatchException e) {
+                    System.out.println("=== Entrada inválida! Digite apenas números inteiros de 0 a 2. ===");
+                    scanner.nextLine();
+                }
+            }
 
             try {
                 game.makeMove(row, column);
