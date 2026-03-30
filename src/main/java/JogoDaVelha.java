@@ -30,5 +30,25 @@ public class JogoDaVelha {
 
     }
 
+    public boolean isMoveValid(int row, int column) {
+        if (row < 0 || row > 2 || column < 0 || column > 2) {
+            return false;
+        }
+        if (board[row][column] != ' ') {
+            return false;
+        }
+        return true;
+    }
+
+    public void makeMove(int row, int column) {
+        if (!isMoveValid(row, column)) {
+            throw new IllegalArgumentException("Jogada inválida!");
+        }
+        board[row][column] = currentPlayer;
+    }
+
+    public char getJogadorAtual() {
+        return currentPlayer;
+    }
 }
 
