@@ -27,13 +27,17 @@ public class Main {
             game.showBoard();
 
             if (game.checkWinner()) {
-                System.out.println("O Jogador " + game.getCurrentPlayer() + " venceu!");
+                System.out.println("O Jogador " + game.getCurrentPlayer() + " venceu a partida!");
                 break;
             }
 
+            if (game.isDraw()) {
+                System.out.println("A partida acabou em Empate!");
+                break;
+            }
 
             game.switchPlayer();
         }
-
+        scanner.close();
     }
 }

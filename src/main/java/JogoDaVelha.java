@@ -72,6 +72,17 @@ public class JogoDaVelha {
         return false;
     }
 
+    public boolean isDraw() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == ' ') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public char getCurrentPlayer() {
         return currentPlayer;
     }
