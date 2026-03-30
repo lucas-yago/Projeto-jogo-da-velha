@@ -26,6 +26,12 @@ public class Main {
 
             game.showBoard();
 
+            if (game.checkWinner()) {
+                System.out.println("O Jogador " + game.getCurrentPlayer() + " venceu!");
+                break;
+            }
+
+
             game.switchPlayer();
         }
 
