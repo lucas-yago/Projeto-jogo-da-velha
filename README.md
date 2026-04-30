@@ -1,4 +1,4 @@
-# Jogo da Velha em Python
+# Jogo da Velha em Java (Corrigido)
 
 Um projeto simples do clássico **Jogo da Velha** (Tic-Tac-Toe) desenvolvido em Java. Este programa permite que dois jogadores humanos joguem alternadamente no console, com validação de jogadas e detecção automática de vitória ou empate.
 
